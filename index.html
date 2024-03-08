@@ -5,16 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio Personal</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function redireccionar() {
+            var seleccion = document.getElementById("menu").value;
+            switch(seleccion) {
+                case "opcion1":
+                    window.location.href = "Parcial1/practicaparcial1.html";
+                    break;
+                default:
+                    break;
+            }
+
+            var seleccion = document.getElementById("otros").value;
+            switch(seleccion) {
+                case "opcion1":
+                    window.location.href = "https://github.com/LicElenes1/LicElenes1.github.io";
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
 </head>
-<body bgcolor="aqua">
-    <h1 style="text-align: center;">Mi Portafolio</h1>
-    <div style="text-align: center;">
-        <a href="Parcial1/practicaparcial1.html">Portafolio Parcial #1</a><br><br>
-    </div>
-    <center><img src="https://avatars.githubusercontent.com/u/159394613?v=4" alt="Foto random"></center>
+<body>
+    <header>
+        <div class="auxiliar">
+        <center>
+          <h1>Proyecto Pagina web</h1>
+            <nav>
+                  <h3>Portafolio: </h3>
+                    <select id="menu" onchange="redireccionar()">
+                      <option value="opcion">Elige un parcial</option>
+                      <option value="opcion1">Parcial 1</option>
+                  </select>
+                  <select id="otros" onchange="redireccionar()">
+                    <option value="opcion">Elige una direccional</option>
+                    <option value="opcion1">Github</option>
+                </select>
+                </center>
+            </nav>
+        </div>
+    </header>
+    <center><br><br><h3>Foto Alumno: </h3><img src="https://avatars.githubusercontent.com/u/159394613?v=4" alt="Foto random"></center>
     <br><em>
-        <footer style="text-align: center;">
-            Elenes Lafuente Santiago
+        <footer>
+            <div class="contenedor">
+                <p>Pagina web hecha por - Elenes Lafuente Santiago</p>
+                <p>Alumno de la Escuela <a href="https://cetis107.edu.mx/portal/">CETIs #107</a></p>
+            </div>
         </footer>
     </em><br><br>
 </body>
