@@ -67,5 +67,10 @@
     overflow: hidden;
     position: fixed;
   }
+
+  a:hover {
+    color: black;
+  }
+  
   
   
