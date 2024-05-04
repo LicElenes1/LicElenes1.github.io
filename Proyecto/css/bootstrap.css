@@ -10834,6 +10834,11 @@ textarea.form-control-lg {
   }
 }
 
-/*# sourceMappingURL=bootstrap.css.map */
+.text-center {
+  background-color: gray;
+  color:  white;
+  padding: 20px;
+}
+
 
 
