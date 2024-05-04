@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-3.7.1.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,52 +9,38 @@
     <meta name="author" content="Elenes Lafuente Santiago">
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/159394613?v=4">
     <title>Mi Portafolio Personal</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        function redireccionar() {
-            var seleccion = document.getElementById("menu").value;
-            switch(seleccion) {
-                case "opcion1":
-                    window.location.href = "Parcial1/practicaparcial1.html";
-                    break;
-                case "opcion2":
-                    window.location.href = "Parcial2/portafolio-parcial2.html";
-                    break;
-                default:
-                    break;
-            }
-
-            var seleccion = document.getElementById("otros").value;
-            switch(seleccion) {
-                case "opcion1":
-                    window.location.href = "https://github.com/LicElenes1/LicElenes1.github.io";
-                    break;
-                default:
-                    break;
-            }
-        }
-    </script>
-</head>
-<body>
-    <header>
-        <div class="auxiliar">
-        <center>
-          <h1>Proyecto Pagina web</h1>
-            <nav>
-                  <h3>Portafolio: </h3>
-                    <select id="menu" onchange="redireccionar()">
-                      <option value="opcion">Elige un parcial</option>
-                      <option value="opcion1">Parcial 1</option>
-                      <option value="opcion2">Parcial 2</option>
-                  </select>
-                  <select id="otros" onchange="redireccionar()">
-                    <option value="opcion">Elige una direccional</option>
-                    <option value="opcion1">Github</option>
-                </select>
-                </center>
-            </nav>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ee6262;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><b>Proyecto Pagina Web</b></a>
+          <div class="Links">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Proyecto/pagina.html">Proyecto</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Parciales
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Parcial 1</a></li>
+                      <li><a class="dropdown-item" href="#">Parcial 2</a></li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled" href="#" aria-disabled="true">Parcial 3</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Github</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
         </div>
-    </header>
+      </nav>
     <center><br><br><h3>Foto Alumno: </h3><img src="https://avatars.githubusercontent.com/u/159394613?s=400&u=d7e9791acacfe3f560b48d6b2682220a1b5fa96b&v=4" alt="Foto random"></center>
     <br><em>
         <footer>
@@ -62,5 +50,7 @@
             </div>
         </footer>
     </em><br><br>
+
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>
