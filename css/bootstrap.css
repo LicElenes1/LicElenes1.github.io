@@ -10834,6 +10834,21 @@ textarea.form-control-lg {
   }
 }
 
-/*# sourceMappingURL=bootstrap.css.map */
+footer {
+  background: #ee6262;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: fixed;
+}
+
+a:hover {
+  color: black;
+}
 
 
