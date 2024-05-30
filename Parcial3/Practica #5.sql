@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-05-2024 a las 03:02:11
+-- Tiempo de generación: 30-05-2024 a las 04:06:27
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `spotify`
+-- Base de datos: `sporify`
 --
 
 -- --------------------------------------------------------
@@ -151,7 +151,9 @@ ALTER TABLE `artista`
 -- Indices de la tabla `artistas_canciones`
 --
 ALTER TABLE `artistas_canciones`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `artista_id` (`artista_id`),
+  ADD KEY `cancion_id` (`cancion_id`);
 
 --
 -- Indices de la tabla `canciones`
@@ -189,7 +191,10 @@ ALTER TABLE `playlist`
 -- Indices de la tabla `playlist_canciones`
 --
 ALTER TABLE `playlist_canciones`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `playlist_id` (`playlist_id`),
+  ADD KEY `cancion_id` (`cancion_id`),
+  ADD KEY `usuario_id` (`usuario_id`);
 
 --
 -- Indices de la tabla `usuario`
@@ -260,6 +265,13 @@ ALTER TABLE `usuario`
 --
 
 --
+-- Filtros para la tabla `artistas_canciones`
+--
+ALTER TABLE `artistas_canciones`
+  ADD CONSTRAINT `artistas_canciones_ibfk_1` FOREIGN KEY (`artista_id`) REFERENCES `artista` (`id`),
+  ADD CONSTRAINT `artistas_canciones_ibfk_2` FOREIGN KEY (`cancion_id`) REFERENCES `canciones` (`id`);
+
+--
 -- Filtros para la tabla `canciones`
 --
 ALTER TABLE `canciones`
@@ -282,6 +294,14 @@ ALTER TABLE `membresia`
 --
 ALTER TABLE `playlist`
   ADD CONSTRAINT `playlist_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`id`);
+
+--
+-- Filtros para la tabla `playlist_canciones`
+--
+ALTER TABLE `playlist_canciones`
+  ADD CONSTRAINT `playlist_canciones_ibfk_1` FOREIGN KEY (`playlist_id`) REFERENCES `playlist` (`id`),
+  ADD CONSTRAINT `playlist_canciones_ibfk_2` FOREIGN KEY (`cancion_id`) REFERENCES `canciones` (`id`),
+  ADD CONSTRAINT `playlist_canciones_ibfk_3` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
