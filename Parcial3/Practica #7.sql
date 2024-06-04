@@ -39,16 +39,16 @@ CREATE TABLE `artista` (
 --
 
 INSERT INTO `artista` (`ID`, `nombre`, `descripcion`) VALUES
-(1, 'Luna Nocturna', 'Una banda de rock alternativo con un toque místico y letras introspectivas.'),
-(2, 'Los Viajeros del Sonido', 'Una agrupación experimental que fusiona diferentes géneros musicales para crear paisajes sonoros únicos.'),
-(3, 'La Voz del Cielo', 'Un cantante solista con una voz angelical que cautiva a sus oyentes con melodías etéreas.'),
-(4, 'Los Rebeldes del Ritmo', 'Un grupo de música electrónica que rompe con las convenciones y redefine los límites del género.'),
-(5, 'Sinfonía Urbana', 'Una orquesta moderna que interpreta piezas clásicas con un toque urbano y contemporáneo.'),
-(6, 'El Poeta del Silencio', 'Un músico solista que utiliza el poder del silencio en sus composiciones para crear atmósferas emotivas y reflexivas.'),
+(1, 'Los Viajeros del Sonido', 'Una agrupación experimental que fusiona diferentes géneros musicales para crear paisajes sonoros únicos.'),
+(2, 'Luna Nocturna', 'Una banda de rock alternativo con un toque místico y letras introspectivas.'),
+(3, 'Los Rebeldes del Ritmo', 'Un grupo de música electrónica que rompe con las convenciones y redefine los límites del género.'),
+(4, 'El Poeta del Silencio', 'Un músico solista que utiliza el poder del silencio en sus composiciones para crear atmósferas emotivas y reflexivas.'),
+(5, 'La Voz del Cielo', 'Un cantante solista con una voz angelical que cautiva a sus oyentes con melodías etéreas.'),
+(6, 'El Creador de Sueños', 'Un compositor y productor visionario que mezcla elementos de música electrónica, ambiental y world music para crear paisajes sonoros evocadores y oníricos.');
 (7, 'Los Soñadores del Jazz', 'Una banda de jazz que transporta a su audiencia a los humeantes clubes de Nueva Orleans con su estilo vibrante y enérgico.'),
-(8, 'La Estrella Fugaz', 'Una artista pop con una presencia escénica deslumbrante y letras pegajosas que se quedan grabadas en la mente de sus seguidores.'),
-(9, 'Los Maestros del Groove', 'Un colectivo de músicos talentosos que dominan el arte del groove y llenan la pista de baile con su energía contagiosa.'),
-(10, 'El Creador de Sueños', 'Un compositor y productor visionario que mezcla elementos de música electrónica, ambiental y world music para crear paisajes sonoros evocadores y oníricos.');
+(8, 'Sinfonía Urbana', 'Una orquesta moderna que interpreta piezas clásicas con un toque urbano y contemporáneo.'),
+(9, 'La Estrella Fugaz', 'Una artista pop con una presencia escénica deslumbrante y letras pegajosas que se quedan grabadas en la mente de sus seguidores.'),
+(10, 'Los Maestros del Groove', 'Un colectivo de músicos talentosos que dominan el arte del groove y llenan la pista de baile con su energía contagiosa.'),
 
 -- --------------------------------------------------------
 
@@ -83,13 +83,13 @@ CREATE TABLE `canciones` (
 --
 
 INSERT INTO `canciones` (`ID`, `nombre`, `genero_id`, `duracion`, `fecha`, `activo`, `foto`) VALUES
-(1, 'Amanecer en el Horizonte', 3, '04:20:00', '2023-01-15', 1, '/ruta/foto1.jpg'),
-(2, 'Melodía del Bosque Encantado', 5, '03:45:00', '2022-11-28', 1, '/ruta/foto2.jpg'),
-(3, 'Caminos de la Ciudad', 2, '05:10:00', '2023-02-05', 1, '/ruta/foto3.jpg'),
-(4, 'Ritmo Latino', 8, '03:30:00', '2023-03-12', 1, '/ruta/foto4.jpg'),
-(5, 'Estrellas en el Cielo', 4, '04:55:00', '2022-10-10', 1, '/ruta/foto5.jpg'),
-(6, 'Sueños de Verano', 1, '04:02:00', '2023-04-20', 1, '/ruta/foto6.jpg'),
-(7, 'Luces de la Noche', 7, '03:15:00', '2023-05-01', 1, '/ruta/foto7.jpg'),
+(1, 'Melodía del Bosque Encantado', 5, '03:45:00', '2022-11-28', 1, '/ruta/foto1.jpg'),
+(2, 'Caminos de la Ciudad', 2, '05:10:00', '2023-02-05', 1, '/ruta/foto2.jpg'),
+(3, 'Ritmo Latino', 8, '03:30:00', '2023-03-12', 1, '/ruta/foto3.jpg'),
+(4, 'Estrellas en el Cielo', 4, '04:55:00', '2022-10-10', 1, '/ruta/foto4.jpg'),
+(5, 'Sueños de Verano', 1, '04:02:00', '2023-04-20', 1, '/ruta/foto5.jpg'),
+(6, 'Luces de la Noche', 7, '03:15:00', '2023-05-01', 1, '/ruta/foto6.jpg'),
+(7, 'Amanecer en el Horizonte', 3, '04:20:00', '2023-01-15', 1, '/ruta/foto7.jpg'),  
 (8, 'Olas del Océano', 6, '05:30:00', '2022-09-08', 1, '/ruta/foto8.jpg'),
 (9, 'Vientos del Desierto', 3, '03:58:00', '2022-12-25', 1, '/ruta/foto9.jpg'),
 (10, 'Canción del Recuerdo', 2, '04:45:00', '2023-06-18', 1, '/ruta/foto10.jpg'),
@@ -262,14 +262,14 @@ CREATE TABLE `generos` (
 --
 
 INSERT INTO `generos` (`ID`, `nombre`) VALUES
-(1, 'Rock'),
-(2, 'Pop'),
+(1, 'Blues'),
+(2, 'Rock'),
 (3, 'Hip Hop'),
 (4, 'Jazz'),
-(5, 'Reggae'),
-(6, 'Blues'),
-(7, 'Electronic'),
-(8, 'Classical');
+(5, 'Pop'),
+(6, 'Classical');
+(7, 'Reggae'),
+(8, 'Electronic'),
 
 -- --------------------------------------------------------
 
@@ -288,9 +288,9 @@ CREATE TABLE `membresia` (
 --
 
 INSERT INTO `membresia` (`ID`, `Nombre`, `precio`) VALUES
-(1, 'Premium Plus', 9.99),
+(1, 'Premium', 9.99),
 (2, 'Family Unlimited', 14.99),
-(3, 'Ultimate Sound', 19.99);
+(3, 'Ultimate', 19.99);
 
 -- --------------------------------------------------------
 
@@ -312,16 +312,16 @@ CREATE TABLE `playlist` (
 --
 
 INSERT INTO `playlist` (`ID`, `nombre`, `duracion`, `total_canciones`, `descripcion`, `publico`) VALUES
-(1, 'Lista de Éxitos', '02:30:00', 20, 'Las canciones más populares del momento', 1),
-(2, 'Relax Total', '03:00:00', 15, 'Playlist perfecta para relajarse y desconectar', 1),
+(1, 'Relax Total', '03:00:00', 15, 'Playlist perfecta para relajarse y desconectar', 1),
+(2, 'Viaje por el Mundo', '03:30:00', 30, 'Descubre música de diferentes culturas y países', 1),
 (3, 'Fiesta Latina', '01:45:00', 10, '¡La mejor música para bailar toda la noche!', 1),
 (4, 'Canciones del Recuerdo', '02:15:00', 18, 'Clásicos que nunca pasan de moda', 1),
 (5, 'Éxitos del Rock', '02:45:00', 25, 'Las mejores canciones de rock de todos los tiempos', 1),
-(6, 'Viaje por el Mundo', '03:30:00', 30, 'Descubre música de diferentes culturas y países', 1),
+(6, 'Lista de Éxitos', '02:30:00', 20, 'Las canciones más populares del momento', 1),
 (7, 'Electro House Party', '01:55:00', 12, '¡Prepárate para una fiesta llena de energía!', 1),
-(8, 'Lista de Éxitos del Verano', '02:20:00', 22, 'Las canciones más pegajosas de la temporada', 1),
-(9, 'Música Clásica Relajante', '03:45:00', 20, 'Perfecta para estudiar o meditar', 1),
-(10, 'Jazz Nocturno', '02:00:00', 15, 'Disfruta de los mejores temas de jazz para la noche', 1),
+(8, 'Jazz Nocturno', '02:00:00', 15, 'Disfruta de los mejores temas de jazz para la noche', 1),
+(9, 'Lista de Éxitos del Verano', '02:20:00', 22, 'Las canciones más pegajosas de la temporada', 1),
+(10, 'Música Clásica Relajante', '03:45:00', 20, 'Perfecta para estudiar o meditar', 1),
 (11, 'Pop en Español', '02:30:00', 20, 'Los éxitos más recientes de la música pop en español', 1),
 (12, 'Retro Party Hits', '02:15:00', 18, 'Revive los mejores momentos con estos clásicos', 1);
 
@@ -356,15 +356,15 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`ID`, `nombre`, `correo`, `membresia_id`) VALUES
-(1, 'Juan Pérez', 'juan.perez@example.com', 2),
-(2, 'María López', 'maria.lopez@example.com', 3),
+(1, 'Eduardo Gastelum', 'eduardo.gastelum@example.com', 2),
+(2, 'María Garza', 'maria.garza@example.com', 3),
 (3, 'Carlos García', 'carlos.garcia@example.com', 1),
-(4, 'Ana Martínez', 'ana.martinez@example.com', 2),
-(5, 'Pedro Rodríguez', 'pedro.rodriguez@example.com', 3),
-(6, 'Laura Sánchez', 'laura.sanchez@example.com', 1),
-(7, 'Pablo González', 'pablo.gonzalez@example.com', 2),
-(8, 'Sofía Ramírez', 'sofia.ramirez@example.com', 3),
-(9, 'Luis Hernández', 'luis.hernandez@example.com', 1),
+(4, 'Christian Ramirez', 'christian.ramirez@example.com', 2),
+(5, 'Pedro Salasar', 'pedro.salasar@example.com', 3),
+(6, 'Juan Sánchez', 'Juan.sanchez@example.com', 1),
+(7, 'Luis Gonzales', 'luis.gonzales@example.com', 1),
+(8, 'Pablo González', 'pablo.gonzalez@example.com', 2),
+(9, 'Kevin Ramírez', 'kevin.ramirez@example.com', 3),
 (10, 'Lucía Gómez', 'lucia.gomez@example.com', 2);
 
 --
