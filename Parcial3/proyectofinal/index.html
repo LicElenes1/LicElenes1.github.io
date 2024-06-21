@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-3.7.1.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto final - Parcial #3</title>
+    <header>
+        <title>Proyecto final - Parcial #3</title>
+        <div class="contenedor">
+            <h1>Proyecto Final Parcial 3</h1>
+            <nav>
+                <ul>
+                    <li><a href="https://licelenes1.github.io/">Menu Principal</a></li>
+                    <li><a href="https://github.com/LicElenes1/LicElenes1.github.io">Github</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header><br>
 </head>
 <body>
-    Santiago Elenes Lafuente
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <center><h3 class="card">SELECT * FROM alumno;</h3></center>
+                <img src="imagenes/imagen1.png" alt="imagen1">
+            </div>
+            <div class="col">
+                <center><br><br><h3 class="card">SELECT curso.nombreDescriptivo,asignatura.nombre
+                    FROM curso
+                    INNER JOIN asignatura
+                    ON curso.idCurso = asignatura.curso;</h3></center><br><br>
+                    <img src="imagenes/cursos.png" alt="imagen2">
+            </div>
+        </div>
+    </div>
+    <br><em>
+        <footer>
+            <div class="contenedor">
+                <p>Pagina web hecha por - Elenes Lafuente Santiago</p>
+                <p>Alumno de la Escuela <a href="https://cetis107.edu.mx/portal/">CETIs #107</a></p>
+            </div>
+        </footer>
+    </em>
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>
