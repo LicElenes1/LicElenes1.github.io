@@ -32,6 +32,40 @@
                     ON curso.idCurso = asignatura.curso;</h3></center><br><br>
                     <img src="imagenes/cursos.png" alt="imagen2">
             </div>
+            <div class="col">
+                <center><br><br><h3 class="card">SELECT nombre, apellido1, apellido2, beca FROM alumno WHERE beca = "si"</h3></center>
+                <img src="imagenes/consulta3.png" alt="imagen3">
+            </div>
+            <div class="col">
+                <center><br><br><h3 class="card">SELECT p.nombre, p.apellido1, p.apellido2, tc.telefono FROM profesor p JOIN tlfcontactoprof tc ON p.idProfesor = tc.idProfesor</h3></center>
+                <img src="imagenes/consulta 4.png" alt="imagen4">
+            </div>
+            <div class="col">
+                <center><br><br><h3 class="card">SELECT alumno.* FROM alumno INNER JOIN matricula ON alumno.idAlumno = matricula.idAlumno INNER JOIN asignatura ON matricula.idAsignatura = asignatura.idAsignatura WHERE asignatura.nombre = "Programacion"</h3></center>
+                <img src="imagenes/consulta 5.PNG" alt="imagen5">
+            </div>
+            <div class="col">
+                <center><br><br><h3 class="card">SELECT profesor.*, asignatura.* FROM profesor INNER JOIN asignatura ON profesor.idProfesor = asignatura.coordinador ORDER BY profesor.nombre, asignatura.nombre
+                </h3></center>
+                <img src="imagenes/consulta 6.PNG" alt="imagen6">
+                <img src="imagenes/consulta 6.1.PNG" alt="imagen7">
+            </div>
+            <div class="col">
+                <center><br><br><h3 class="card">SELECT asignatura.nombre AS nombre_asignatura, COUNT(matricula.idAlumno) AS total_alumnos_inscritos FROM asignatura INNER JOIN matricula ON asignatura.idAsignatura = matricula.idAsignatura GROUP BY asignatura.idAsignatura ORDER BY total_alumnos_inscritos DESC</h3></center>
+                <img src="imagenes/consulta 7.png" alt="imagen8">
+            </div>
+            <div class="col">
+                <center><br><br><h3 class="card">SELECT alumno.* FROM alumno INNER JOIN matricula ON alumno.idAlumno = matricula.idAlumno INNER JOIN asignatura ON matricula.idAsignatura = asignatura.idAsignatura WHERE asignatura.coordinador = 'PR016'</h3></center>
+                <img src="imagenes/consulta 8.png" alt="imagen9">
+            </div>
+            <div class="col">
+                <center><br><br><h3 class="card"></h3></center>
+                <img src="" alt="">
+            </div>
+            <div class="col">
+                <center><br><br><h3 class="card"></h3></center>
+                <img src="" alt="">
+            </div>
         </div>
     </div>
     <br><em>
