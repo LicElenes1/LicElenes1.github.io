@@ -59,12 +59,56 @@
                 <img src="imagenes/consulta 8.png" alt="imagen9">
             </div>
             <div class="col">
-                <center><br><br><h3 class="card"></h3></center>
-                <img src="" alt="">
+                <center><br><br><h3 class="card">SELECT <br>
+                    c.idCurso, <br>
+                    c.nombreDescriptivo AS nombre_curso,<br>
+                    a.idAsignatura,<br>
+                    a.nombre AS nombre_asignatura,<br>
+                    p.idProfesor,<br>
+                    p.nombre AS nombre_profesor,<br>
+                    p.apellido1 AS apellido1_profesor,<br>
+                    p.apellido2 AS apellido2_profesor <br>
+                FROM <br>
+                    curso c <br>
+                JOIN <br>
+                    asignatura a ON c.idCurso = a.curso <br>
+                JOIN <br>
+                    impartir i ON a.idAsignatura = i.idAsignatura <br>
+                JOIN <br>
+                    profesor p ON i.idProfesor = p.idProfesor <br>
+                ORDER BY <br>
+                    c.idCurso, a.idAsignatura, p.idProfesor;</h3></center>
+                <img src="imagenes/consulta 9.png" alt="imagen10">
             </div>
             <div class="col">
-                <center><br><br><h3 class="card"></h3></center>
-                <img src="" alt="">
+                <center><br><br><h3 class="card"></h3>>SELECT <br>
+                    al.idAlumno, <br>
+                    al.nombre AS nombre_alumno, <br>
+                    al.apellido1 AS apellido1_alumno, <br>
+                    al.apellido2 AS apellido2_alumno, <br>
+                    a.idAsignatura, <br>
+                    a.nombre AS nombre_asignatura, <br>
+                    p.idProfesor, <br>
+                    p.nombre AS nombre_profesor, <br>
+                    p.apellido1 AS apellido1_profesor, <br>
+                    p.apellido2 AS apellido2_profesor, <br>
+                    c.idCurso, <br>
+                    c.nombreDescriptivo AS nombre_curso <br>
+                FROM <br>
+                    alumno al <br>
+                JOIN <br>
+                    matricula m ON al.idAlumno = m.idAlumno <br>
+                JOIN <br>
+                    asignatura a ON m.idAsignatura = a.idAsignatura <br>
+                JOIN <br>
+                    impartir i ON a.idAsignatura = i.idAsignatura <br>
+                JOIN <br>
+                    profesor p ON i.idProfesor = p.idProfesor <br>
+                JOIN <br>
+                    curso c ON a.curso = c.idCurso <br>
+                ORDER BY <br>
+                    al.idAlumno, a.idAsignatura</center>
+                <img src="imagenes/consulta 10.png" alt="imagen11">
             </div>
         </div>
     </div>
