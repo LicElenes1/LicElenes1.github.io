@@ -3,6 +3,8 @@
     $nombre = $_GET["nombre"];
     $edad = $_GET["edad"];
     $escuela = $_GET["escuela"];
+    $color = $_GET["color"];
+    $musica = $_GET["musica"];
     //obtienen los valores
 
     if($edad > 18){
@@ -16,6 +18,10 @@
     echo "<h2>Edad: ".$edad."</h2>";
 
     echo "<h2>Escuela: ".$escuela."</h2>";
+
+    echo "<h2>Color Favorito: ".$color."</h2>";
+
+    echo "<h2>Musica Favorita: ".$musica."</h2>";
 
     //Imprimir el valor de esos campos
 
