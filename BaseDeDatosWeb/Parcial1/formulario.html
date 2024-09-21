@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen en línea</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <form action="formulario.php" method="POST">
+            <div class="row">
+                <h1>Exámen de programación</h1><hr>
+                <div class="card mb-4">
+                    <div class="card-header">
+                    <h2>Antes de empezar primero inserta tu nombre</h2>
+                    </div>
+                    <div class="card-body">
+                        <input type="text" name="nombre" required>
+                    </div>
+                </div>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                        1. ¿Qué lenguaje de programación se utiliza comúnmente para dar estilo y diseño a las páginas web?
+                        </div>
+                        <div class="card-body">
+                            <p><input type="radio" name="pregunta1" value="HTML" required> HTML </p>
+                            <p><input type="radio" name="pregunta1" value="CSS" required> CSS </p>
+                            <p><input type="radio" name="pregunta1" value="PHP" required> PHP </p>
+                        </div>
+                    </div>
+                    <div class="card p-4 mb-4">
+                        <p>
+                            2. El lenguaje de programación <input type="text" name="pregunta2" required> se utiliza principalmente para definir el comportamiento de una página web.
+                        </p>
+                    </div>
+                    <div class="card mb-4"></div>
+                        <div class="card-header">
+                        3. ¿Cuál de los siguientes lenguajes se usa principalmente para estructurar el contenido de una página web?
+                        </div>
+                        <div class="card-body">
+                            <p><input type="radio" name="pregunta3" value="JAVA" required> JAVA </p>
+                            <p><input type="radio" name="pregunta3" value="PHP" required> PHP </p>
+                            <p><input type="radio" name="pregunta3" value="HTML" required> HTML </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4"></div>
+                        <div class="card-header">
+                        4. ¿Cuáles de los siguientes lenguajes de programación se utilizan comúnmente para el desarrollo web del lado del servidor?
+                        </div>
+                        <div class="card-body">
+                            <p><input type="checkbox" name="pregunta4[]" value="PYTHON" > Python </p>
+                            <p><input type="checkbox" name="pregunta4[]" value="HTML" > Html </p>
+                            <p><input type="checkbox" name="pregunta4[]" value="PHP" > Php </p>
+                            <p><input type="checkbox" name="pregunta4[]" value="CSS" > Css </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4"></div>
+                        <div class="card-header">
+                        5. ¿Qué es un "commit" en el contexto de GitHub?
+                        </div>
+                        <div class="card-body">
+                            <p><input type="radio" name="pregunta5" value="A" required> Un archivo de configuración </p>
+                            <p><input type="radio" name="pregunta5" value="B" required> Un cambio guardado en el repositorio de código </p>
+                            <p><input type="radio" name="pregunta5" value="C" required> Un tipo de error en el código </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4"></div>
+                        <div class="card-header">
+                        6. ¿Qué significa "bug" en el contexto de programación?
+                        </div>
+                        <div class="card-body">
+                            <p><input type="radio" name="pregunta6" value="A" required> Un error en el código </p>
+                            <p><input type="radio" name="pregunta6" value="B" required> Un tipo de variable </p>
+                            <p><input type="radio" name="pregunta6" value="C" required> Una función de prueba </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4"></div>
+                        <div class="card-header">
+                        7. ¿Cuál de los siguientes es un lenguaje de programación interpretado?
+                        </div>
+                        <div class="card-body">
+                            <p><input type="radio" name="pregunta7" value="A" > C++ </p>
+                            <p><input type="radio" name="pregunta7" value="B" > Java </p>
+                            <p><input type="radio" name="pregunta7" value="C" > Python </p>
+                            <p><input type="radio" name="pregunta7" value="D" > C# </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4"></div>
+                        <div class="card-header">
+                        8. ¿Qué estructura de control se usa para hacer una elección?
+                        </div>
+                        <div class="card-body">
+                            <p><input type="radio" name="pregunta8" value="A" > for </p>
+                            <p><input type="radio" name="pregunta8" value="B" > if </p>
+                            <p><input type="radio" name="pregunta8" value="C" > while </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4"></div>
+                        <div class="card-header">
+                        9. ¿Qué hace la función print() en Python?
+                        </div>
+                        <div class="card-body">
+                            <p><input type="radio" name="pregunta9" value="A" > Imprime en la consola </p>
+                            <p><input type="radio" name="pregunta9" value="B" > Imprime en pantalla </p>
+                            <p><input type="radio" name="pregunta9" value="C" > Imprime en un archivo </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4"></div>
+                        <div class="card-header">
+                            10. ¿Cuál es la función de la palabra clave return en una función?
+                        </div>
+                        <div class="card-body">
+                            <p><input type="radio" name="pregunta10" value="A" > Finaliza la función </p>
+                            <p><input type="radio" name="pregunta10" value="B" > Llama a otra función </p>
+                            <p><input type="radio" name="pregunta10" value="C" > Devuelve un valor </p>
+                        </div>
+                    </div>
+             </div>
+            <center><br><input type="submit" class="btn btn-primary" value="Terminar examen"></center>
+        </form>
+    </div>
+
+
+    <!--<div class="container">
+        <form action="practica4.php" method="POST">
+            <div class="row">
+                <h1>Exámen de programación</h1><hr>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                        1. ¿Lenguaje de programación que se utiliza para WEB?
+                        </div>
+                        <div class="card-body">
+                            <p><input type="radio" name="pregunta1" value="HTML" required> HTML </p>
+                            <p><input type="radio" name="pregunta1" value="SQL" required> SQL </p>
+                            <p><input type="radio" name="pregunta1" value="PHP" required checked> PHP </p>
+                        </div>
+                    </div>
+                    <div class="card p-4 mb-4">
+                        <p>
+                            2. <input type="text" name="pregunta2" value="Java" required> es una plataforma informática de lenguaje de programación creada por Sun Microsystems en 1995.
+                        </p>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                        3. ¿Son lenguajes utilizados para la gestión de base de datos? (Selecciona 2)
+                        </div>
+                        <div class="card-body">
+                            <p><input type="checkbox" name="pregunta3[]" value="mongo" checked> Mongo </p>
+                            <p><input type="checkbox" name="pregunta3[]" value="sql" checked> SQL </p>
+                            <p><input type="checkbox" name="pregunta3[]" value="html" > HTML </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                        4. ¿Es la forma correcta de nombrar una variable en PHP?
+                        </div>
+                        <div class="card-body">
+                            <p><input type="radio" name="pregunta4" value="int numero = 18;" required> int numero = 18; </p>
+                            <p><input type="radio" name="pregunta4" value="var numero = 18;" required> var numero = 18; </p>
+                            <p><input type="radio" name="pregunta4" value="$numero = 18;" required checked> $numero = 18; </p>
+                        </div>
+                    </div>
+                    <div class="card p-4 mb-4">
+                        <p>
+                            5. <input type="text" name="pregunta5" value="count" required> es una función de php que sirve para contar los elementos de un array.
+                        </p>
+                    </div>
+            </div>
+            <br><input type="submit" class="btn btn-primary" value="Terminar examen">
+        </form>
+    </div>-->
+</body>
+</html>
