@@ -19,4 +19,3 @@ $(document).ready(function (){
         }
     })
 });
-//PROFE LA ANDREA SALAS BELTRAN ME ESTA ROBANDO EL CODIGO
